@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var playAgainButton: UIButton!
     @IBOutlet weak var gameStatusMessageLabel: UILabel!
     @IBOutlet weak var flowerImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
