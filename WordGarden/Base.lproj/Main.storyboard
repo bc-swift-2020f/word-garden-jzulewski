@@ -83,7 +83,11 @@
                                             <constraint firstAttribute="width" constant="30" id="xwR-wS-dF2"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                        <connections>
+                                            <action selector="doneKeyPressed:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="eTr-VY-LyP"/>
+                                            <action selector="guessLetterFieldChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="JGG-z9-mbZ"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ep7-7t-rhj">
                                         <rect key="frame" x="38" y="0.0" width="150" height="34"/>
