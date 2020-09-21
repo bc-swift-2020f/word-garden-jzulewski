@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -66,7 +68,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="_ _ _ _ _" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ubJ-Dl-hNc">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="_ " borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ubJ-Dl-hNc">
                                 <rect key="frame" x="16" y="129" width="288" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="9DS-p3-IIa"/>
@@ -89,7 +91,7 @@
                                             <action selector="guessLetterFieldChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="JGG-z9-mbZ"/>
                                         </connections>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ep7-7t-rhj">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ep7-7t-rhj">
                                         <rect key="frame" x="38" y="0.0" width="150" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="LcR-X1-Tor"/>
@@ -103,7 +105,7 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5n-mr-bEa">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5n-mr-bEa">
                                 <rect key="frame" x="115" y="213" width="90" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="9Gq-Df-Aqe"/>
@@ -124,7 +126,8 @@
                                 <rect key="frame" x="0.0" y="311" width="320" height="257"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Bkh-5W-e9d" firstAttribute="top" secondItem="ag6-dS-4mw" secondAttribute="bottom" constant="8" id="2z5-j9-Way"/>
                             <constraint firstItem="ubJ-Dl-hNc" firstAttribute="top" secondItem="Bkh-5W-e9d" secondAttribute="bottom" constant="8" id="BHN-46-ATB"/>
@@ -155,7 +158,6 @@
                             <constraint firstItem="p7z-79-4fh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="xJr-u1-CyT"/>
                             <constraint firstItem="4c1-P6-r6O" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="yHH-c3-ah9"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="flowerImageView" destination="4c1-P6-r6O" id="al2-0Y-2Wy"/>
@@ -165,7 +167,7 @@
                         <outlet property="playAgainButton" destination="T5n-mr-bEa" id="I8P-jx-CxG"/>
                         <outlet property="wordsBeingRevealedLabel" destination="ubJ-Dl-hNc" id="hx4-9u-VOU"/>
                         <outlet property="wordsGuessedLabel" destination="9tY-Le-U4b" id="rTE-9H-dMf"/>
-                        <outlet property="wordsInGame" destination="EI7-lw-eTI" id="l0I-sE-s0l"/>
+                        <outlet property="wordsInGameLabel" destination="EI7-lw-eTI" id="l0I-sE-s0l"/>
                         <outlet property="wordsMissedLabel" destination="Hhv-Gb-W18" id="BOG-d9-mtE"/>
                         <outlet property="wordsRemainingLabel" destination="fLe-G2-6XV" id="nBU-qU-Avn"/>
                     </connections>
@@ -177,5 +179,8 @@
     </scenes>
     <resources>
         <image name="flower8" width="613.5" height="1082"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
